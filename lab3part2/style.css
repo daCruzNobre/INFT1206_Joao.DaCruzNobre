@@ -10,6 +10,8 @@ html {
 
 /* Your CSS below here */
 
-div {
-  
+.cool-box {
+  width: 200px;
+  height: 200px;
+  background-color:red ;
 }
