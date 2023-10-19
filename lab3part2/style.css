@@ -14,9 +14,11 @@ html {
   margin: auto;
   width: 200px;
   height: 200px;
-  background-color: red;
   text-align: center;
   line-height: 200px;
   font-size: 1.125rem; /*divided the desired font size in px by chrome's default(16px)*/
-   
+  text-shadow: 1px 1px 2px black;
+  color: red;
+  border-radius: 5px 5px 5px 5px;
+  background: linear-gradient(to right bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.2) 100% ), green;
 }
