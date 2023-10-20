@@ -32,12 +32,16 @@ body {
   nav {
     background-color: #000;
     padding: .5em;
+    position: sticky;  /* Make the navigation bar sticky */
+    top: 0;
   }
   
   nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;  /* Use flex display property */
+    justify-content: space-between; /* Distribute items with equal space */
   }
   
   nav a {
