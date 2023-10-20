@@ -105,3 +105,36 @@ header h1 {
 section > h1 + p, section > h2 + p, section > h3 + p, section > h4 + p, section > h5 + p, section > h6 + p {
   text-indent: 20px;
 }
+
+/* Give the link, visited, focus, and hover states colors that match the horizontal bars */
+a, a:link, a:visited {
+  color: blue; /* Suitable color for links and visited */
+}
+
+/* Make links underlined by default, but remove underline on hover and focus */
+a, a:link, a:visited {
+  text-decoration: underline; /* Underline by default */
+}
+
+a:focus, a:hover {
+  text-decoration: none; /* Remove underline on hover and focus */
+}
+
+/* Remove the default focus outline from ALL links */
+a {
+  outline: none;
+}
+
+/* Give the active state a noticeably different styling that fits with the page design */
+a:active {
+  color: #FF0000; /* Example different color for active state */
+  font-weight: bold; /* Add bold font for active state */
+}
+
+/* Insert an external link icon next to external links */
+a[href*="http"] {
+  padding-right: 20px; /* Provide space for the icon */
+  background: url('external-link-icon.png') no-repeat right center; /* Add the icon as background */
+  background-size: 20px 20px; /* Resize the icon to an appropriate size */
+}
+
