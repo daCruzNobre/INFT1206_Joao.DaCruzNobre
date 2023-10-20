@@ -26,7 +26,21 @@ body {
   .grid {
     margin: 0 auto;
     padding: 0 20px;
-    max-width: 980px;
+    max-width: 980px; /* Set a maximum width for the columns */
+    display: flex; /* Create a two-column layout using flexbox */
+    flex-wrap: wrap; /* Allow columns to wrap to the next line on smaller screens */ 
+  }
+
+  article {
+    flex: 2; /* The article will take 2/3 of the available space */
+    padding: 20px; /* Add padding to the article content (you can adjust as needed) */
+    box-sizing: border-box; /* Include padding in the width calculation */
+  }
+
+  aside {
+    flex: 1; /* The aside will take 1/3 of the available space */
+    padding: 20px; /* Add padding to the aside content (you can adjust as needed) */
+    box-sizing: border-box; /* Include padding in the width calculation */
   }
   
   nav {
@@ -51,11 +65,16 @@ body {
   }
   
   .photos {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    display: grid; /* Create a two-column grid for photographs */
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 1px; /* Add a 1-pixel gap between images */
   }
-
-  .feature {
-      width: 200px;
+  
+  .photos li {
+    display: block;
+  }
+  
+  .photos img {
+    max-width: 100%;
+    display: block;
   }
