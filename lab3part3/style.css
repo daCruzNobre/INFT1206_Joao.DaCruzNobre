@@ -74,12 +74,34 @@ header, footer {
 
 }
 
+/* General Text Styling */
+html {
+  font-size: 10px;
+}
+
 /* body font */
 body {
   font-family:'playfair_displayregular', serif;
+  font-size: 1.6rem; /* 16px (base font size) multiplied by 1.6 = 26px */
+  line-height: 1.5;
 }
 
 /*header font */
 h1, h2, h3, h4, h5, h6 {
   font-family: "montserratbold", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+h1 {
+  font-size: 4rem;
+}
+
+/* allign header 1*/
+header h1 {
+  text-align: center;
+}
+
+/* Text Indentation for First Paragraphs After Headings */
+section > h1 + p, section > h2 + p, section > h3 + p, section > h4 + p, section > h5 + p, section > h6 + p {
+  text-indent: 20px;
 }
