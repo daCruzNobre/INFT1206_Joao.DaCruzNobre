@@ -87,10 +87,29 @@ class EvilCircle extends Shape {
   // Constructor for EvilCircle
   constructor(x, y) {
     // Call the constructor of the Shape superclass with hardcoded values
-    super(x, y, 20, 20, 'white', 10);
+    super(x, y, 20, 20);
+    this.color = "white";
+    this.size = 10;
+
+    window.addEventListener('keydown', (e) => {
+      switch(e.key) {
+        case 'a':
+          this.x -= this.velX;
+          break;
+        case 'd':
+          this.x += this.velX;
+          break;
+        case 'w':
+          this.y -= this.velY;
+          break;
+        case 's':
+          this.y += this.velY;
+          break;
+      }
+    });
   }
 
-  
+  // EvilCircle Methods
 }
 
 const balls = [];
