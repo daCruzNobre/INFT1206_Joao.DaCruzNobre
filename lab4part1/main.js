@@ -16,13 +16,13 @@ randomize.addEventListener('click', result);
 
 function result() {
     let newStory = storyText
-    const xitem = randomValueFromArray(insertX)
-    const zitem  = randomValueFromArray(insertZ)
-    const yitem = randomValueFromArray(insertY)
-    
+    const xitem = randomValueFromArray(insertx)
+    const zitem  = randomValueFromArray(insertz)
+    const yitem = randomValueFromArray(inserty)
+
   if(customName.value !== '') {
     const name = customName.value;
-
+    newStory = newStory.replaceAll('Bob', name);
   }
 
   if(document.getElementById("uk").checked) {
