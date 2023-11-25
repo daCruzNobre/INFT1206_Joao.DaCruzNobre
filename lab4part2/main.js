@@ -14,9 +14,17 @@ const alternatives = {'pic1.jpg' : 'Closeup of a human eye',
 'pic4.jpg' : 'Section of wall from a pharoah\'s tomb',
 'pic5.jpg' : 'Large moth on a leaf'}
 
-
-
 /* Looping through images */
+for (const image of imagearray) {
+    const newImage = document.createElement('img');
+    newImage.setAttribute('src', `images/${image}`);
+    newImage.setAttribute('alt', alternatives[image]);
+    thumbBar.appendChild(newImage);
+    newImage.addEventListener('click', e => {
+      displayedImage.src = e.target.src;
+      displayedImage.alt = e.target.alt;
+    });
+  }
 
 const newImage = document.createElement('img');
 newImage.setAttribute('src', xxx);
