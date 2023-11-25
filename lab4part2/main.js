@@ -26,13 +26,17 @@ for (const image of imagearray) {
     });
   }
 
-const newImage = document.createElement('img');
-newImage.setAttribute('src', xxx);
-newImage.setAttribute('alt', xxx);
-thumbBar.appendChild(newImage);
-
 /* Wiring up the Darken/Lighten button */
 
-btn.setAttribute("class", xxx);
-btn.textContent = xxx;
-overlay.style.backgroundColor = xxx;
+btn.addEventListener('click', () => {
+    const bClass = btn.getAttribute('class');
+    if (bClass === 'dark') {
+      btn.setAttribute('class','light');
+      btn.textContent = 'Lighten';
+      overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
+    } else {
+      btn.setAttribute('class','dark');
+      btn.textContent = 'Darken';
+      overlay.style.backgroundColor = 'rgba(0,0,0,0)';
+    }
+});
