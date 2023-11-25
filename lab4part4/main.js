@@ -178,11 +178,12 @@ while (balls.length < 25) {
   para.textContent = `Ball count: ${ballNumber}`;
 }
 
-function loop() {
-  const evilCircle = new EvilCircle(
-    random(0,width),
-    random(0,height)
-  );
+const evilCircle = new EvilCircle(
+  random(0,width),
+  random(0,height)
+);
+
+function loop() {  
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
 
@@ -194,9 +195,9 @@ function loop() {
     }
   }
 
-  evilCircle.draw;
-  evilCircle.checkBounds;
-  evilCircle.collisionDetect;
+  evilCircle.draw();
+  evilCircle.checkBounds();
+  evilCircle.collisionDetect();
 
   requestAnimationFrame(loop);
 }
