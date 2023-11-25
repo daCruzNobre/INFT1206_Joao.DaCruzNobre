@@ -82,6 +82,17 @@ class Ball extends Shape {
   }
 }
 
+// The EvilCircle class extends Shape
+class EvilCircle extends Shape {
+  // Constructor for EvilCircle
+  constructor(x, y) {
+    // Call the constructor of the Shape superclass with hardcoded values
+    super(x, y, 20, 20, 'white', 10);
+  }
+
+  
+}
+
 const balls = [];
 
 while (balls.length < 25) {
