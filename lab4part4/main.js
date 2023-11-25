@@ -7,7 +7,7 @@ const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
 
-const para = document.querySelector('p'); // variable to store reference to paragraph
+const paragraph = document.querySelector('p'); // variable to store reference to paragraphgraph
 let ballNumber =0; // variable to keep track of ball numbers
 
 // function to generate random number
@@ -151,7 +151,7 @@ class EvilCircle extends Shape {
         if (distance < this.size + ball.size) {
           ball.exists = false;
           ballNumber = ballNumber - 1;
-          para.textContent = `Ball count: ${ballNumber}`;
+          paragraph.textContent = `Ball count: ${ballNumber}`;
         }
       }
     }
@@ -175,7 +175,7 @@ while (balls.length < 25) {
 
   balls.push(ball);
   ballNumber = ballNumber + 1;
-  para.textContent = `Ball count: ${ballNumber}`;
+  paragraph.textContent = `Ball count: ${ballNumber}`;
 }
 
 const evilCircle = new EvilCircle(
