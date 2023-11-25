@@ -32,6 +32,6 @@ function result() {
     newStory = newStory.replaceAll('300 pounds', weight);
   }
 
-  story.textContent = ;
+  story.textContent = newStory;
   story.style.visibility = 'visible';
 }
