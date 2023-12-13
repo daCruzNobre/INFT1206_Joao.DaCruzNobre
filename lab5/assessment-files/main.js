@@ -5,14 +5,29 @@ const commentWrapper = document.querySelector('.comment-wrapper');
 
 commentWrapper.style.display = 'none';
 
-showHideBtn.onclick = function() {
+showHideBtn.addEventListener('click', toggleComments);
+showHideBtn.addEventListener('keydown', handleKeyPress);
+
+function toggleComments() {
   let showHideText = showHideBtn.textContent;
-  if(showHideText === 'Show comments') {
+  if (showHideText === 'Show comments') {
     showHideBtn.textContent = 'Hide comments';
     commentWrapper.style.display = 'block';
   } else {
     showHideBtn.textContent = 'Show comments';
     commentWrapper.style.display = 'none';
+  }
+};
+
+function handleKeyPress(event) {
+  if (event.key === 'Enter') {
+    toggleComments();
+  }
+};
+
+function handleKeyPress(event) {
+  if (event.key === 'Enter' || event.keyCode === 13) {
+    toggleComments();
   }
 };
 
@@ -45,3 +60,5 @@ function submitComment() {
   nameField.value = '';
   commentField.value = '';
 }
+
+
